@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/nflHeader"
+        style="@style/ButtonStyle3"
+        android:layout_height="40dp"
+        android:src="@drawable/nfl" />
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/scoreLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/scrollView"
+            android:layout_weight="10"
+            android:orientation="horizontal"
+            tools:context="com.example.android.scorekeeper.MainActivity">
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:orientation="vertical"
+                tools:context="com.example.android.scorekeeper.MainActivity">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="84dp"
+                    android:layout_margin="8dp"
+                    android:src="@drawable/fourtyniners" />
+
+                <TextView
+                    android:id="@+id/team_a_score"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="center_horizontal"
+                    android:paddingBottom="24dp"
+                    android:text="0"
+                    android:textColor="#000000"
+                    android:textSize="56sp" />
+
+                <Button
+                    style="@style/ButtonStyle1"
+                    android:onClick="addSixForTeamA"
+                    android:text="TouchDown" />
+
+                <Button
+                    style="@style/ButtonStyle1"
+                    android:onClick="addThreeForTeamA"
+                    android:text="Field Goal" />
+
+                <Button
+                    style="@style/ButtonStyle1"
+                    android:onClick="addTwoForTeamA"
+                    android:text="Safety" />
+
+                <Button
+                    style="@style/ButtonStyle1"
+                    android:onClick="addOneForTeamA"
+                    android:text="Extra Point" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/darker_gray" />
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:orientation="vertical"
+                tools:context="com.example.android.scorekeeper.MainActivity">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="85dp"
+                    android:layout_margin="8dp"
+                    android:src="@drawable/raiders" />
+
+                <TextView
+                    android:id="@+id/team_b_score"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="center_horizontal"
+                    android:paddingBottom="24dp"
+                    android:text="0"
+                    android:textColor="#000000"
+                    android:textSize="56sp" />
+
+                <Button
+                    style="@style/ButtonStyle2"
+                    android:onClick="addSixForTeamB"
+                    android:text="TouchDown" />
+
+                <Button
+                    style="@style/ButtonStyle2"
+                    android:onClick="addThreeForTeamB"
+                    android:text="Field Goal" />
+
+                <Button
+                    style="@style/ButtonStyle2"
+                    android:onClick="addTwoForTeamB"
+                    android:text="Safety" />
+
+                <Button
+                    style="@style/ButtonStyle2"
+                    android:onClick="addOneForTeamB"
+                    android:text="Extra Point" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/resetButton"
+        style="@style/ButtonStyle3"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="32dp"
+        android:onClick="reset"
+        android:text="Reset" />
+
+</RelativeLayout>
